@@ -1,0 +1,116 @@
+.hidden {
+    display: none;
+  }
+  /* 
+  input {
+      display:block
+  } */
+  
+  .checked + label {
+    background-color: orange;
+  }
+  
+  .history-cards {
+    background-color: #f2f2f2;
+  }
+  .history-cards .green + label {
+    background-color: green;
+  }
+  
+  .history-cards input {
+    display: none;
+  }
+  
+  .history h2 {
+    text-align: center;
+  }
+  
+  .btn {
+    padding: 5px 20px;
+    border: 30px;
+    border-radius: 8px;
+    background-color: rgb(165, 165, 240);
+  }
+  .answers-container {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  select,
+  button {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  hr {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  h3.quest-text {
+    margin-top: 0;
+  }
+  
+  .answers div {
+    margin-bottom: 10px;
+  }
+  
+  .answers input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .answers label {
+    display: inline-block;
+  }
+  
+  .btn {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .btn:hover {
+    background-color: #218838;
+  }
+  
+  .history {
+    text-align: center;
+  }
+  
+  .history-cards {
+    margin-top: 20px;
+  }
+  

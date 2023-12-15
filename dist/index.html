@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="select-category">Category:</label>
+      <select id="select-category">
+        <option value="1">Sports</option>
+        <option value="2" selected="selected">Geography</option>
+        <option value="3">History</option>
+      </select>
+    </form>
+
+    <form>
+      <label for="select-count"> Count:</label>
+      <select id="select-count">
+        <option value="1">10</option>
+        <option value="2" selected="selected">20</option>
+        <option value="3">30</option>
+      </select>
+    </form>
+
+    <form>
+      <label for="select-difficulty"> Difficulty:</label>
+      <select id="select-difficulty">
+        <option value="1">Easy</option>
+        <option value="2" selected="selected">Medium</option>
+        <option value="3">Hard</option>
+      </select>
+    </form>
+
+    <button class="btn search">START</button>
+    <button class="btn reset hidden">Clear</button>
+    <button class="btn download hidden">Download</button>
+    <hr />
+    <h3 class="quest-text">Press START</h3>
+    <div class="answers hidden">
+    </div>
+    <button class="btn next hidden">Next</button>
+    <hr />
+    <div class="history hidden">
+      <div class="points">
+
+      </div>
+      <h2>Questions</h2>
+      <div class="history-cards">
+      </div>
+    </div>
+
+    <script src="fetch-quiz.js"></script>
+    <!-- <script type="module" src="worker.js"></script> -->
+  </body>
+</html>
