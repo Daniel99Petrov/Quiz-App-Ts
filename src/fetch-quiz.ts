@@ -13,7 +13,7 @@ let countDropdown: Dropdown = document.getElementById(
 let difficultyDropdown: Dropdown = document.getElementById(
   "select-difficulty"
 ) as Dropdown;
-let searchButton: Button = document.querySelector(".search") as Button;
+let searchButton: Button = document.querySelector(".search") as Button; // things can be null (what happens if they are not in the .html file
 let nextButton: Button = document.querySelector(".next") as Button;
 let resetButton: Button = document.querySelector(".reset") as Button;
 let questText: HTMLHeadingElement = document.querySelector(
@@ -29,7 +29,7 @@ let pointsMessage: Message = document.querySelector(".points") as Message;
 let downloadButton: Button = document.querySelector(".download") as Button;
 
 // Initialize variables for quiz state
-let allQuestions: Array<Question> = [];
+let allQuestions: Array<Question> = []; // Aim for using constants in global scope variables
 let currentQuestion: Question;
 let questionText: string;
 let currentAnswers: Array<string> = [];
@@ -46,7 +46,7 @@ let points = 0;
 categoryDropdown.onchange = (ev) => {
   let selectedIndex: number = categoryDropdown.selectedIndex;
   let selectedOption: DropdownOption = categoryDropdown.options[selectedIndex];
-  if (selectedOption.value === "1") {
+  if (selectedOption.value === "1") { // could there be a more elegant way of implementing this?
     categoryTransformer = 21;
   } else if (selectedOption.value === "3") {
     categoryTransformer = 23;
@@ -58,9 +58,9 @@ categoryDropdown.onchange = (ev) => {
 
 // Event listener for count dropdown
 countDropdown.onchange = (ev) => {
-  let selectedIndex = countDropdown.selectedIndex;
+  let selectedIndex = countDropdown.selectedIndex; //probably should be const too
   let selectedOption = countDropdown.options[selectedIndex];
-  if (selectedOption.value === "1") {
+  if (selectedOption.value === "1") { // could there be a more elegant way of implementing this?
     count = 10;
   } else if (selectedOption.value === "3") {
     count = 30;
@@ -72,7 +72,7 @@ countDropdown.onchange = (ev) => {
 difficultyDropdown.onchange = (ev) => {
   let selectedIndex = difficultyDropdown.selectedIndex;
   let selectedOption = difficultyDropdown.options[selectedIndex];
-  if (selectedOption.value === "1") {
+  if (selectedOption.value === "1") { // could there be a more elegant way of implementing this?
     difficulty = "easy";
   } else if (selectedOption.value === "3") {
     difficulty = "hard";
@@ -115,6 +115,7 @@ function displayQuestion(): void {
   shuffle(currentAnswers);
   console.log(currentAnswers);
   console.log(answers);
+  // A lot of console.logs
   answers.innerHTML = "";
 
   currentAnswers.forEach((answer: string, index: number) => {
@@ -218,6 +219,9 @@ function endGame(): void {
 }
 // Function to reset the game state
 function resetGame(): void {
+
+  // maybe have all these in an array and iterate over it adding hidden to the classlist?
+  
   answers.classList.add("hidden");
   resetButton.classList.add("hidden");
   nextButton.classList.add("hidden");
