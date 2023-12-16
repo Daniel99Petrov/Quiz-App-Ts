@@ -43,7 +43,7 @@ let localPoints = 0;
 let points = 0;
 
 // Event listener for category dropdown
-categoryDropdown.onchange = (ev) => {
+categoryDropdown.onchange = () => {
   let selectedIndex: number = categoryDropdown.selectedIndex;
   let selectedOption: DropdownOption = categoryDropdown.options[selectedIndex];
   if (selectedOption.value === "1") { // could there be a more elegant way of implementing this?
@@ -57,7 +57,7 @@ categoryDropdown.onchange = (ev) => {
 };
 
 // Event listener for count dropdown
-countDropdown.onchange = (ev) => {
+countDropdown.onchange = () => {
   let selectedIndex = countDropdown.selectedIndex; //probably should be const too
   let selectedOption = countDropdown.options[selectedIndex];
   if (selectedOption.value === "1") { // could there be a more elegant way of implementing this?
@@ -69,7 +69,7 @@ countDropdown.onchange = (ev) => {
   }
 };
 // Event listener for difficulty dropdown
-difficultyDropdown.onchange = (ev) => {
+difficultyDropdown.onchange = () => {
   let selectedIndex = difficultyDropdown.selectedIndex;
   let selectedOption = difficultyDropdown.options[selectedIndex];
   if (selectedOption.value === "1") { // could there be a more elegant way of implementing this?
